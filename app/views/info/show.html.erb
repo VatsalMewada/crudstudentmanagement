@@ -1,0 +1,30 @@
+<h1>Profile</h1>
+<style>
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+.my_class{
+    border-radius:20px;
+}
+table.roundedCorners { 
+  border: 1px solid ;
+  border-radius: 13px; 
+  border-spacing: 0;
+  }
+table.roundedCorners td, 
+table.roundedCorners th { 
+  border-bottom: 1px solid ;
+  padding: 10px; 
+  }
+table.roundedCorners tr:last-child > td {
+  border-bottom: none;
+}
+</style>
+<center>
+<table class="roundedCorners">
+<tr><th align=right>Name:  </th><td> <%= @info.name%></td></tr>
+<tr><th align=right>Password:  </th><td> <%= @info.password%></td></tr>
+<tr><th align=right>Address:  </th><td> <%= @info.address%></td></tr>
+<tr><td align=right><%= link_to  "Back", info_index_path %></td></tr>
+</table>
+</center>

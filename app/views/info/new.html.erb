@@ -1,0 +1,44 @@
+<h1>Info#new</h1>
+<link rel="stylesheet" href="assets/stylesheets/application.css"> 
+
+<center>
+<%= form_with(method: "post" ,model: @info,:url => info_index_path, local: true) do |f|%>
+
+<table class="roundedCorners">
+<tr>
+<td>
+<%=f.label :name %></td>
+<td>
+<%=f.text_field :name , class: 'my_class' %></td>
+
+</tr>
+
+<tr>
+<td>
+<%=f.label :password %></td>
+<td>
+<%=f.text_field :password, class: 'my_class' %></td>
+
+</tr>
+
+<tr>
+<td>
+<%=f.label :address %></td>
+<td>
+<%=f.text_field :address, class: 'my_class' %></td>
+
+</tr>
+
+<tr>
+<td>
+</td>
+<td align=center>
+<%= f.submit class:'my_class'%>
+</td>
+
+</tr>
+
+</table>
+
+<%end%>
+</center>

@@ -1,0 +1,36 @@
+<h1>Dashboard</h1>
+
+<style>
+
+</style>
+<link rel="stylesheet" href="assets/stylesheets/application.css"> 
+
+
+<center>
+<table class="roundedCorners">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Password</th>
+<th>Address</th>
+</tr>
+</thead>
+
+
+<%@info.each do |i|%>
+<tr>
+<td><%=i.name %></td>
+<td><%=i.password %></td>
+<td><%=i.address %></td>
+<td><%=link_to("Show", info_path(i)) %></td>
+<td><%=link_to("Edit", edit_info_path(i)) %></td>
+<td><%=link_to("Delete", i, method: :delete) %></td>
+</tr>
+<% end %>
+
+<%=link_to("Add User", new_info_path) %>
+
+
+</table>
+</center>
